@@ -15,5 +15,8 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: ./test-script.sh
+          ls
+      - run: |
+          cd ${{ github.workspace }}
+          test-script.sh
       - run: echo "🍏 This job's status is ${{ job.status }}."
