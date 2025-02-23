@@ -18,5 +18,6 @@ jobs:
           ls
       - run: |
           cd ${{ github.workspace }}
+          sudo chmod +x ./test-script.sh
           ./test-script.sh
       - run: echo "🍏 This job's status is ${{ job.status }}."
